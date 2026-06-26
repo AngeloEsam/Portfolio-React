@@ -20,7 +20,7 @@ export const personalInfo: PersonalInfo = {
     'Passionate Full Stack Developer with expertise in Node.js, React, and cloud technologies. I craft high-performance, scalable applications that deliver exceptional user experiences. Driven by clean code principles and a love for solving complex problems.',
   cvUrl: '',
   contact: {
-    email: 'angloesam61@email.com',
+    email: 'angloesam61@gmail.com',
     phone: '+20 1093291108',
     linkedin: 'https://www.linkedin.com/in/angelo-esam/',
     github: 'https://github.com/AngeloEsam',

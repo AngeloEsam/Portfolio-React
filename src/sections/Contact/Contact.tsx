@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Globe } from 'lucide-react';
 import { personalInfo } from '@/data/portfolioData';
 import SectionHeader from '@/components/ui/SectionHeader';
@@ -46,12 +47,40 @@ export default function Contact() {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = async (_data: FormData) => {
-    // Simulate form submission (replace with real email service / API)
-    await new Promise((res) => setTimeout(res, 1200));
-    setStatus('success');
-    reset();
-    setTimeout(() => setStatus('idle'), 5000);
+  const onSubmit = async (data: FormData) => {
+    try {
+      setStatus('idle');
+      
+      // Ensure these environment variables are set in your .env file
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.error("EmailJS credentials are not set in the environment variables.");
+        setStatus('error');
+        return;
+      }
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: data.name,
+          email: data.email,
+          title: data.subject,
+          message: data.message,
+        },
+        publicKey
+      );
+
+      setStatus('success');
+      reset();
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setStatus('error');
+    }
   };
 
   return (
