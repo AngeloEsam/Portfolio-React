@@ -196,13 +196,13 @@ export const projects: Project[] = [
 export const education: Education[] = [
   {
     id: 'edu1',
-    institution: 'Cairo University',
+    institution: 'Assiut University',
     degree: "Bachelor's Degree",
     field: 'Computer Science',
-    startYear: '2017',
-    endYear: '2021',
-    location: 'Cairo, Egypt',
-    grade: 'Good',
+    startYear: '2019',
+    endYear: '2023',
+    location: 'Assiut, Egypt',
+    grade: 'Very Good with Honors',
     description:
       'Focused on software engineering, algorithms, data structures, and database systems.',
   },
@@ -211,9 +211,9 @@ export const education: Education[] = [
     institution: 'Information Technology Institute (ITI)',
     degree: 'Professional Diploma',
     field: 'Full Stack Web Development',
-    startYear: '2021',
-    endYear: '2022',
-    location: 'Cairo, Egypt',
+    startYear: '2023',
+    endYear: '2024',
+    location: 'Assiut, Egypt',
     grade: 'Excellent',
     description:
       '9-month intensive diploma covering Node.js, React, Angular, databases, and software architecture.',
