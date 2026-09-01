@@ -8,7 +8,7 @@ import type {
   Achievement,
   SuggestedQuestion,
 } from '@/types';
-import avatarImg from '@/assets/me.jpg';
+import avatarImg from '@/assets/me.png';
 
 // ==================== Personal Info ====================
 export const personalInfo: PersonalInfo = {
