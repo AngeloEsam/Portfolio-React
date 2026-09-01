@@ -35,7 +35,7 @@ export default function About() {
               {/* Glow */}
               <div className="absolute inset-0 bg-linear-to-br from-blue-500 to-violet-600 rounded-3xl blur-2xl opacity-20 scale-110" />
               {/* Avatar card */}
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl bg-linear-to-br from-blue-500 via-violet-500 to-purple-600 flex items-center justify-center shadow-2xl overflow-hidden">
+              <div className="relative w-96 h-100 rounded-3xl bg-linear-to-br from-blue-500 via-violet-500 to-purple-600 flex items-center justify-center shadow-2xl overflow-hidden">
                 {personalInfo.avatar ? (
                   <img
                     src={personalInfo.avatar}
