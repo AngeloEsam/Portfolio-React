@@ -15,7 +15,7 @@ const LinkedinIcon = () => (
 import { personalInfo } from '@/data/portfolioData';
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const year = 2025
   const { contact, name } = personalInfo;
 
   return (
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-slate-500 text-sm flex items-center gap-1.5">
-            Built with <Heart size={14} className="text-red-500 fill-red-500" /> by{' '}
+            made by <Heart size={16} className="text-red-500" /> with React & Tailwind CSS |
             <span className="text-slate-300 font-medium">{name}</span> &copy; {year}
           </p>
         </div>
