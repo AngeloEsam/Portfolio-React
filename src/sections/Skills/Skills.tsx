@@ -10,14 +10,18 @@ interface SkillBarProps {
   level: number;
   delay?: number;
   color: string;
+  icon?: string;
 }
 
-function SkillBar({ name, level, delay = 0, color }: SkillBarProps) {
+function SkillBar({ name, level, delay = 0, color, icon }: SkillBarProps) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
   return (
     <div ref={ref} className="group">
-      <div className="flex justify-between mb-1.5">
-        <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{name}</span>
+      <div className="flex justify-between items-center mb-1.5">
+        <div className="flex items-center gap-2">
+          {icon && <span className="text-base">{icon}</span>}
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{name}</span>
+        </div>
         <span className="text-xs font-semibold text-slate-400">{level}%</span>
       </div>
       <div className="h-2 rounded-full bg-slate-100 dark:bg-slate-700/60 overflow-hidden">
@@ -91,7 +95,7 @@ export default function Skills() {
               </div>
               <div className="space-y-5">
                 {active.skills.map((skill, i) => (
-                  <SkillBar key={skill.name} name={skill.name} level={skill.level} delay={i} color={active.color} />
+                  <SkillBar key={skill.name} name={skill.name} level={skill.level} delay={i} color={active.color} icon={skill.icon} />
                 ))}
               </div>
             </motion.div>
@@ -106,8 +110,8 @@ export default function Skills() {
                   whileHover={{ y: -4, scale: 1.03 }}
                   className="group p-4 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/40 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 text-center cursor-default"
                 >
-                  <div className={`w-10 h-10 rounded-xl bg-linear-to-br ${active.color} bg-opacity-20 flex items-center justify-center text-lg mx-auto mb-2 shadow-sm`}>
-                    {active.icon}
+                  <div className={`w-12 h-12 rounded-xl bg-linear-to-br ${active.color} bg-opacity-20 flex items-center justify-center text-2xl mx-auto mb-2 shadow-sm`}>
+                    {skill.icon || active.icon}
                   </div>
                   <p className="text-sm font-semibold text-slate-700 dark:text-slate-200 leading-tight">{skill.name}</p>
                   <div className="mt-2 h-1 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden">
@@ -134,8 +138,9 @@ export default function Skills() {
                 <motion.span
                   key={`${cat.category}-${skill.name}`}
                   whileHover={{ scale: 1.08, y: -2 }}
-                  className="px-4 py-2 rounded-full text-sm font-medium bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 cursor-default shadow-sm"
+                  className="px-4 py-2 rounded-full text-sm font-medium bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 cursor-default shadow-sm flex items-center gap-2"
                 >
+                  {skill.icon && <span>{skill.icon}</span>}
                   {skill.name}
                 </motion.span>
               ))
