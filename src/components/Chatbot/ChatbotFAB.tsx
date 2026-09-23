@@ -18,7 +18,7 @@ export default function ChatbotFAB() {
         onClick={() => setIsOpen((o) => !o)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.93 }}
-        aria-label={isOpen ? 'Close chat' : 'Open AI assistant'}
+        aria-label={isOpen ? 'Close chat' : 'Open portfolio assistant'}
         className="relative w-14 h-14 rounded-2xl bg-linear-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-2xl shadow-blue-500/40 cursor-pointer"
       >
         {/* Pulse ring */}

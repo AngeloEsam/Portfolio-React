@@ -62,8 +62,8 @@ export default function About() {
           >
             <div className="text-center lg:text-left">
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                Turning ideas into{' '}
-                <span className="gradient-text">digital reality</span>
+                Building web applications{' '}
+                <span className="gradient-text">end to end</span>
               </h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
                 {personalInfo.summary}
@@ -71,9 +71,9 @@ export default function About() {
             </div>
 
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              I specialize in building end-to-end web applications — from designing scalable
-              backend architectures to crafting pixel-perfect frontends. My goal is to write code
-              that is not only functional but also maintainable, well-tested, and a joy to work with.
+              I work across the full stack, from designing backend APIs and database schemas to building 
+              responsive user interfaces. I focus on writing maintainable code, implementing solid architecture 
+              patterns, and delivering applications that perform well at scale.
             </p>
 
             {/* Highlights grid */}

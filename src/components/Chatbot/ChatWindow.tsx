@@ -14,7 +14,7 @@ interface ChatWindowProps {
 const INITIAL_MESSAGE: ChatMessage = {
   id: 'welcome',
   role: 'bot',
-  content: `👋 Hi! I'm an AI assistant for **${personalInfo.name}'s** portfolio.\n\nI can answer questions about his skills, experience, projects, education, and contact info. What would you like to know?`,
+  content: `👋 Hi! I'm ${personalInfo.name}'s portfolio assistant.\n\nI can answer questions about his skills, experience, projects, education, and contact info. What would you like to know?`,
   timestamp: new Date(),
 };
 
@@ -70,7 +70,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
     setInput('');
     setIsTyping(true);
 
-    // Simulate AI thinking delay (600–1200ms)
+    // Simulate response delay
     const delay = 600 + Math.random() * 600;
     await new Promise((res) => setTimeout(res, delay));
 
@@ -104,7 +104,7 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9, y: 20 }}
       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-      className="w-[360px] sm:w-[400px] h-[540px] flex flex-col rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/30 border border-slate-200 dark:border-slate-700/50 bg-slate-50 dark:bg-slate-800"
+      className="w-90 sm:w-100 h-135 flex flex-col rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/30 border border-slate-200 dark:border-slate-700/50 bg-slate-50 dark:bg-slate-800"
       style={{ transformOrigin: 'bottom right' }}
     >
       {/* Header */}

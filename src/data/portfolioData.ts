@@ -9,6 +9,12 @@ import type {
   SuggestedQuestion,
 } from '@/types';
 import avatarImg from '@/assets/me.png';
+import freshFruitsImg from '@/assets/fresh-fruits.png';
+import adminDashboard from '@/assets//admin.png';
+import eLearningImg from '@/assets/e-learning.png';
+import foodieImg from '@/assets/foodie.png';
+import awjImg from '@/assets/awj.png';
+import foodDeliverImg from '@/assets/food-deliver.png';
 
 // ==================== Personal Info ====================
 export const personalInfo: PersonalInfo = {
@@ -17,7 +23,7 @@ export const personalInfo: PersonalInfo = {
   tagline: 'Building scalable web solutions with modern technologies',
   avatar: avatarImg,
   summary:
-    'Passionate Full Stack Developer with expertise in Node.js, React, and cloud technologies. I craft high-performance, scalable applications that deliver exceptional user experiences. Driven by clean code principles and a love for solving complex problems.',
+    'Full Stack Developer specializing in Node.js and React. I build scalable web applications with clean architecture and focus on performance, maintainability, and user experience.',
   cvUrl: '',
   contact: {
     email: 'angloesam61@gmail.com',
@@ -138,9 +144,9 @@ export const projects: Project[] = [
     id: 'proj1',
     title: 'Barber Booking System',
     description:
-      'Engineered a real-time scheduling engine handling 100+ concurrent requests with sub-100ms latency using Socket.io and background task automation.',
+      'Real-time scheduling system handling concurrent booking requests with Socket.io and automated task management.',
     image: '',
-    technologies: ['Node.js', 'Socket.io', 'Real-time', 'Cron Jobs'],
+    technologies: ['Node.js', 'Socket.io', 'MongoDB', 'Cron Jobs'],
     status: 'completed',
     featured: true,
     category: 'Full Stack',
@@ -149,18 +155,18 @@ export const projects: Project[] = [
     id: 'proj2',
     title: 'Contracting Management System',
     description:
-      'Streamlined project workflows, reducing manual data processing time by 40% via dynamic financial template integration.',
+      'Project management platform with dynamic financial templates and workflow automation for contracting companies.',
     image: '',
-    technologies: ['Node.js', 'MongoDB', 'REST API', 'Finance'],
+    technologies: ['Node.js', 'MongoDB', 'REST API', 'Express.js'],
     status: 'completed',
     featured: true,
     category: 'Full Stack',
   },
   {
     id: 'proj3',
-    title: 'Social Media (Threads Clone)',
+    title: 'Social Media Platform',
     description:
-      'Developed a full-featured social platform supporting 50+ simulated users with instant messaging and Cloudinary media optimization.',
+      'Full-featured social platform with real-time messaging, media uploads via Cloudinary, and user interactions.',
     image: '',
     technologies: ['React.js', 'Node.js', 'Cloudinary', 'Socket.io'],
     status: 'completed',
@@ -171,9 +177,9 @@ export const projects: Project[] = [
     id: 'proj4',
     title: 'Job Marketplace (ERSHAD)',
     description:
-      'Executed a role-based access control (RBAC) system, managing permissions for 3 distinct user types: Admin, Client, and Freelancer.',
+      'Job marketplace platform with role-based access control for admins, clients, and freelancers.',
     image: '',
-    technologies: ['Node.js', 'RBAC', 'PostgreSQL', 'JWT'],
+    technologies: ['Node.js', 'PostgreSQL', 'JWT', 'Express.js'],
     status: 'completed',
     featured: true,
     category: 'Backend',
@@ -182,12 +188,72 @@ export const projects: Project[] = [
     id: 'proj5',
     title: 'React Admin Dashboard',
     description:
-      'Developed a responsive admin dashboard with management pages for products, users, sales, and analytics — improving navigation and internal data visibility.',
-    image: '',
-    technologies: ['React.js', 'Tailwind CSS', 'Analytics', 'Responsive'],
+      'Responsive admin dashboard for managing products, users, sales data, and analytics.',
+    image: adminDashboard,
+    technologies: ['React.js', 'Tailwind CSS', 'TypeScript'],
     liveDemo: 'https://dashboard-react-js-flax.vercel.app/',
     status: 'completed',
     featured: true,
+    category: 'Frontend',
+  },
+  {
+    id: 'proj6',
+    title: 'Fresh Fruits',
+    description:
+      'Responsive landing page for fresh fruits e-commerce with clean, modern UI focused on product presentation.',
+    image: freshFruitsImg,
+    technologies: ['React.js'],
+    liveDemo: 'https://fresh-fruits-react.vercel.app/',
+    status: 'completed',
+    featured: false,
+    category: 'Frontend',
+  },
+  {
+    id: 'proj7',
+    title: 'E-learning Website',
+    description:
+      'Educational platform landing page with responsive design for presenting courses and learning content.',
+    image: eLearningImg,
+    technologies: ['React.js'],
+    liveDemo: 'https://e-learning-react-js.vercel.app/',
+    status: 'completed',
+    featured: false,
+    category: 'Frontend',
+  },
+  {
+    id: 'proj8',
+    title: 'Foodie Zone',
+    description:
+      'Modern restaurant landing page built with React and Tailwind CSS, featuring responsive layout and clean design.',
+    image: foodieImg,
+    technologies: ['React.js', 'Tailwind CSS'],
+    liveDemo: 'https://foodie-tailwind-five.vercel.app/',
+    status: 'completed',
+    featured: false,
+    category: 'Frontend',
+  },
+  {
+    id: 'proj9',
+    title: 'Aug Tech | أوج تك',
+    description:
+      'Technology company landing page built with Next.js, focusing on professional corporate presentation.',
+    image: awjImg,
+    technologies: ['Next.js'],
+    liveDemo: 'https://landing-page-next-lake.vercel.app/',
+    status: 'completed',
+    featured: false,
+    category: 'Frontend',
+  },
+  {
+    id: 'proj10',
+    title: 'Food Lover',
+    description:
+      'Restaurant landing page built with vanilla HTML, CSS, and JavaScript, featuring responsive design.',
+    image: foodDeliverImg,
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    liveDemo: 'https://food-deliver-zeta.vercel.app/',
+    status: 'completed',
+    featured: false,
     category: 'Frontend',
   },
 ];
